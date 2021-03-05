@@ -4,6 +4,7 @@ import axios from 'axios';
 // Any routes that are protected will require the JWT in order to access them.
 
 const setAuthToken = (token) => {
+<<<<<<< HEAD
   if (token) {
     axios.defaults.headers.common['Authorization'] = token;
     console.log('the headers with axios from utils'
@@ -12,6 +13,16 @@ const setAuthToken = (token) => {
   } else {
       delete axios.defaults.headers.common['Authorization']
   }
+=======
+    // Apply the token to request header
+    if (token) {
+        axios.defaults.headers.common['Authorization'] = token;
+        console.log('=====> HEADERS');
+        console.log(axios.defaults.headers.common);
+    } else {
+        delete axios.defaults.headers.common['Authorization']
+    }
+>>>>>>> upstream/main
 }
 
 export default setAuthToken;
