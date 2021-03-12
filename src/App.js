@@ -35,6 +35,7 @@ console.log(REACT_APP_SERVER_URL)
   const [currentUser, setCurrentUser] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
+  // trigger rebuild
  
   useEffect(() => {
     let token;
